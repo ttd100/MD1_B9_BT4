@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="width">
+<br><br>
+<input id="height">
+<br><br>
+<button onclick="print()">In</button>
+<script>
+
+    function print() {
+        let width = +document.getElementById('width').value;
+        let height = +document.getElementById('height').value;
+
+        for (let i = 0; i < width; i++) {
+            document.write('*');
+        }
+        document.write('<br>');
+
+        for (let i = 0; i < height - 2; i++) {
+            document.write('*');
+            for (let j = 0; j < width - 2; j++) {
+                document.write('&nbsp&#8202&#8202&#8202');
+            }
+            document.write('*');
+            document.write('<br>');
+        }
+        for (let i = 0; i < width; i++) {
+            document.write('*');
+        }
+    }
+</script>
+</body>
+</html>

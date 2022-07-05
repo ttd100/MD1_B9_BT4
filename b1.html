@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số lượng số Fibonacci cần in <br><br>
+
+<input type="number" id="input">
+<button onclick="print()">In</button>
+<p id="result">Dãy số</p>
+
+
+<script>
+
+    function print() {
+
+        document.getElementById('result').innerText = '1, 1, ';
+
+        let input = +document.getElementById('input').value;
+
+        let f1 = 1, f2 = 1;
+        let f3;
+
+        if (input > 0) {
+            for (let i = 0; i < input - 2; i++) {
+                f3 = f1 + f2;
+                document.getElementById('result').innerText += (' ' + f3 + ',');
+                f1 = f2;
+                f2 = f3;
+            }
+            document.getElementById('result').innerText = document.getElementById('result').innerText.slice(0, -1);
+            document.getElementById('result').innerText += '.';
+        } else {
+            alert('Nhập số lớn hơn 0');
+        }
+    }
+
+</script>
+
+</body>
+</html>

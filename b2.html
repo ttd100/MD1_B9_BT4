@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>tính giai thừa của 1 số nguyên dương</h1><br>
+<input id="so" type="text">
+<button onclick="print()">!</button>
+<p id="result"></p>
+<script>
+    function print() {
+        let n = +document.getElementById('so').value
+        let a=1;
+        if (n<0){
+            document.getElementById('result').innerText= "không tính được số âm"
+        }else {
+            for (let i= 1; i <=n;i++){
+                a *=i;
+            }
+            document.getElementById('result').innerText= a;
+        }
+    }
+</script>
+</body>
+</html>
